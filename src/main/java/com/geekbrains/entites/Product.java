@@ -28,4 +28,5 @@ public class Product {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
 }
