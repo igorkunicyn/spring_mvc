@@ -6,6 +6,7 @@
 <body>
 
 <h1>Products List Result</h1>
+
 <ul>
     <c:forEach var="item" items="${products}">
         <li>   id: ${item.id}</li>

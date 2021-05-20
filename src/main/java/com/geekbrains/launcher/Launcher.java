@@ -18,5 +18,4 @@ public class Launcher {
         server.start();
         server.join();
     }
-
 }

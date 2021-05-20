@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+
 <form:form  action = "resultAddProduct" modelAttribute="product">
     id: <form:input path="id" />
     <br>
