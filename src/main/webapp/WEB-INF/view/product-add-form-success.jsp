@@ -6,7 +6,7 @@
 <body>
 <h1> Product ${product.title} add</h1>
 <br>
-   id: ${product.id}
+ id: ${product.id}
 <br>
 title: ${product.title}
 <br>

@@ -1,7 +1,6 @@
  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
-
 <html>
 <body>
 <form:form  action = "resultAddProduct" modelAttribute="product">

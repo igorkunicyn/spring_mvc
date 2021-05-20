@@ -19,5 +19,4 @@ public class ProductRepository {
     public List<Product> getProductList() {
         return productList;
     }
-
 }
