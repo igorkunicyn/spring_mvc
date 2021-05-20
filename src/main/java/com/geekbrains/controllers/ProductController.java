@@ -20,35 +20,12 @@ public class ProductController {
     public void setProductService(ProductService productService) {
         this.productService = productService;
     }
-//    @Autowired
-//    public void setProductRepository(ProductRepository productRepository) {
-//        this.productRepository = productRepository;
-//    }
-//    @RequestMapping("/showStudent")
-//    public String hello(Model uiModel, @ModelAttribute("student") Student student) {
-//        student = studentsService.getStudentById(10);
-//        uiModel.addAttribute("student", student);
-//        System.out.println(student.getFirstName() + " " + student.getLastName());
-//        return "students";
-//    }
 
     @RequestMapping(path = "/showProductById", method = RequestMethod.GET)
     @ResponseBody
     public String showProductById(@RequestParam int id) {
         return productService.getProductById(id);
     }
-
-//    @RequestMapping(path = "/setStudentById", method = RequestMethod.POST)
-//    public void setStudent(@RequestBody Student student) {
-//        System.out.println(student.getFirstName() + " " + student.getLastName());
-//    }
-
-//    @RequestMapping("/showForm")
-//    public String showSimpleForm(Model uiModel) {
-//        Student student = new Student();
-//        uiModel.addAttribute("student", student);
-//        return "student-form";
-//    }
 
     @RequestMapping("/showForm")
     public String showSimpleForm(Model uiModel) {

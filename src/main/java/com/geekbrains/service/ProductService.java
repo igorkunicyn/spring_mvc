@@ -22,8 +22,7 @@ public class ProductService {
     public String getProductById(int id) {
         for (Product product: productRepository.getProductList()) {
             if (product.getId() == id) {
-               String result = String.format("id: %s, title: %s, cost: %s",product.getId(), product.getTitle(),product.getCost());
-                return result ;
+               return String.format("id: %s, title: %s, cost: %s",product.getId(), product.getTitle(),product.getCost());
             }
         }
         return "Product with id = " + id + " not exists";

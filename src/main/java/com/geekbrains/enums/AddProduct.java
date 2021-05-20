@@ -5,7 +5,7 @@ public enum AddProduct {
     ID_NOT_UNIQUE("id not unique"),
     PRODUCT_EXISTS("product already exists");
 
-    private String name;
+    private final String name;
 
     AddProduct(String name) {
         this.name = name;
