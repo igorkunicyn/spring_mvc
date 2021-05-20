@@ -14,9 +14,7 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
 
-    //    private StudentsService studentsService;
     private ProductService productService;
-//    private ProductRepository productRepository;
 
     @Autowired
     public void setProductService(ProductService productService) {
