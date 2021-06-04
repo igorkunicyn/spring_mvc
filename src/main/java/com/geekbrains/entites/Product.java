@@ -4,20 +4,6 @@ public class Product {
     private int id;
     private String title;
     private float cost;
-//    private final List<Product> productList = new ArrayList<>();
-
-//    @Autowired
-//    public void setProductRepository(ProductRepository productRepository){
-//        this.productRepository = productRepository;
-//    }
-
-//    public List<Product> getProductList() {
-//        return productList;
-//    }
-
-//    public Product() {
-//        productList.add(this);
-//    }
 
     public int getId() {
         return id;
