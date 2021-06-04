@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Book Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Book List</h1>
+    <a href="/book/new">Create New Book</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Year Exit</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    <tbody>
+            <tr th:each="book : ${listBooks}">
+                <td th:text="${book.id}">Book ID</td>
+                <td th:text="${book.title}">Title</td>
+                <td th:text="${book.description}">Description</td>
+                <td th:text="${book.year}">Year Exit</td>
+                <td>
+                    <a th:href="@{'/book/edit/' + ${book.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/book/delete/' + ${book.id}}">Delete</a>
+                </td>
+            </tr>
+    </tbody>
+    </table>
+<!--    <div>-->
+<!--    Total Items: [[${totalItems}]]-->
+<!--    <a th:if="${currentPage > 1}" th:href="@{'/book/page/1'}">First</a>-->
+<!--    <span th:unless="${currentPage > 1}">First</span>-->
+<!--    <a th:if="${currentPage > 1}" th:href="@{'/book/page/' + ${currentPage - 1}}">Previous</a>-->
+<!--    <span th:unless="${currentPage > 1}">Previous</span>-->
+<!--    <span th:each="i : ${#numbers.sequence(1, totalPages)}">-->
+<!--        <a th:if="${currentPage != i}" th:href="@{'/book/page/' + ${i}}">[[${i}]]</a>-->
+<!--        <span th:unless="${currentPage != i}">[[${i}]]</span>-->
+<!--        &nbsp;-->
+<!--    </span>-->
+<!--    <a th:if="${currentPage < totalPages}" th:href="@{'/book/page/' + ${currentPage + 1}}">Next</a>-->
+<!--    <span th:unless="currentPage < totalPages">Next</span>-->
+<!--    <a th:if="${currentPage < totalPages}" th:href="@{'/book/page/' + ${totalPages}}">Last</a>-->
+<!--    <span th:unless="${currentPage < totalPages}">Last</span>-->
+<!--    </div>-->
+</div>
+</body>
+</html>
