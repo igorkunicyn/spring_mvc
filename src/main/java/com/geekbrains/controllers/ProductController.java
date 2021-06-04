@@ -51,5 +51,6 @@ public class ProductController {
         uiModel.addAttribute("products", products);
         return "product-result-list";
     }
+
 }
 
